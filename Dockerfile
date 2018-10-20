@@ -7,7 +7,9 @@ ENV pip_packages "ansible yamllint ansible-lint flake8 testinfra molecule"
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        apt-utils \
+       build-essential \
        python-setuptools \
+       python-dev \
        python-pip \
        software-properties-common \
        rsyslog systemd systemd-cron sudo \

@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-LABEL maintainer="Jeff Geerling"
+LABEL maintainer="UEBERBIT GmbH"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -19,7 +19,7 @@ RUN apt-get update \
        python3-pip \
        python3-yaml \
        software-properties-common \
-       rsyslog systemd systemd-cron sudo iproute2 \
+       rsyslog systemd systemd-cron sudo iproute2 openssh-client vim git \
     && rm -Rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
